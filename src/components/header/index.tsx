@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import styled from "styled-components"
 import { ButtonHeader } from "../buttons/button-header"
 
@@ -18,7 +19,9 @@ const Header = () => {
             </Nav>
 
             <Div>
-                <ButtonHeader/>
+                <Link to={"/formulario"}>
+                    <ButtonHeader />
+                </Link>
 
                 <img src="/images/icone-carrinho.png" alt="Ícone do carrinho de compras" />
             </Div>
@@ -33,6 +36,10 @@ const GlobalHeader = styled.header`
     max-width: 1155px;
     margin: 0 auto;
     height: 15vh;
+
+    img {
+    cursor: pointer;
+    }
 `
 const Nav = styled.nav`
     ul {
@@ -47,6 +54,7 @@ const Nav = styled.nav`
     color: var(--white-color);
     font-size: 16px;
     font-weight: 500;
+    cursor: pointer;
     }
 `
 
