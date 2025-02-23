@@ -1,5 +1,11 @@
 import styled from "styled-components"
 import { ButtonCarrinho } from "../../components/buttons/button-carrinho"
+import camisetaRoxa from "../../assets/images/camisetaRoxa.png"
+import camisetaPreta from "../../assets/images/camisetaPreta.png"
+import canecaRoxa from "../../assets/images/canecaRoxa.png"
+import camisetaPreta2 from "../../assets/images/camisetaPreta2.png"
+import canecaPreta from "../../assets/images/canecaPreta.png"
+import camisetaRoxa2 from "../../assets/images/camisetaRoxa2.png"
 
 const Home = () => {
     return (
@@ -9,7 +15,7 @@ const Home = () => {
 
                 <ContainerProdutos>
                     <Produto>
-                        <ImagemProduto src="/images/camisetaRoxa.png"
+                        <ImagemProduto src={camisetaRoxa}
                             alt="camiseta dev em dobro roxa com logo pequeno" />
                         <InfoProduto>
                             <H2>Camiseta Dev em Dobro</H2>
@@ -24,7 +30,7 @@ const Home = () => {
 
 
                     <Produto>
-                        <ImagemProduto src="/images/camisetaPreta.png"
+                        <ImagemProduto src={camisetaPreta}
                             alt="camiseta dev em dobro preta com logo pequeno" />
                         <InfoProduto>
                             <H2>Camiseta Dev em Dobro</H2>
@@ -39,7 +45,7 @@ const Home = () => {
 
 
                     <Produto>
-                        <ImagemProduto src="/images/canecaRoxa.png"
+                        <ImagemProduto src={canecaRoxa}
                             alt="caneca dev em dobro roxa" />
                         <InfoProduto>
                             <H2>Caneca Dev em Dobro</H2>
@@ -54,7 +60,7 @@ const Home = () => {
 
 
                     <Produto>
-                        <ImagemProduto src="/images/camisetaPreta2.png"
+                        <ImagemProduto src={camisetaPreta2}
                             alt="camiseta dev em dobro preta com logo maior" />
                         <InfoProduto>
                             <H2>Camiseta Dev em Dobro</H2>
@@ -69,7 +75,7 @@ const Home = () => {
 
 
                     <Produto>
-                        <ImagemProduto src="/images/canecaPreta.png"
+                        <ImagemProduto src={canecaPreta}
                             alt="caneca preta dev em dobro" />
                         <InfoProduto>
                             <H2>Caneca Dev em Dobro</H2>
@@ -83,7 +89,7 @@ const Home = () => {
                     </Produto>
 
                     <Produto>
-                        <ImagemProduto src="/images/camisetaRoxa2.png"
+                        <ImagemProduto src={camisetaRoxa2}
                             alt="camiseta dev em dobro roxa com logo maior" />
                         <InfoProduto>
                             <H2>Camiseta Dev em Dobro</H2>

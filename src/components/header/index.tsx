@@ -6,7 +6,7 @@ import { ButtonHeader } from "../buttons/button-header"
 const Header = () => {
     return (
         <GlobalHeader>
-            <img src="/images/logo.png" alt="Logo Dev em Dobro" />
+            <img src="/logo.png" alt="Logo Dev em Dobro" />
 
             <Nav>
                 <ul>
@@ -23,7 +23,7 @@ const Header = () => {
                     <ButtonHeader />
                 </Link>
 
-                <img src="/images/icone-carrinho.png" alt="Ícone do carrinho de compras" />
+                <img src="/icone-carrinho.png" alt="Ícone do carrinho de compras" />
             </Div>
         </GlobalHeader>
     )
