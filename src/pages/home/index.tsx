@@ -1,12 +1,9 @@
 import styled from "styled-components"
-import { Header } from "../../header"
-import { Footer } from "../../footer"
-import { ButtonCarrinho } from "../../buttons/button-carrinho"
+import { ButtonCarrinho } from "../../components/buttons/button-carrinho"
 
 const Home = () => {
     return (
         <>
-            <Header />
             <Section>
                 <H1>Produtos</H1>
 
@@ -101,8 +98,6 @@ const Home = () => {
 
                 </ContainerProdutos>
             </Section>
-
-            <Footer />
         </>
     )
 }
