@@ -30,8 +30,10 @@ const Form = () => {
 
                     <Label htmlFor="password">Senha</Label>
                     <Input
-                        type="text"
+                        type="password"
                         id="password"
+                        {...register('password', { required: true })}
+                        {...errors.password && <span>Senha incorreta</span>}
                     />
 
                     <Checkbox>
@@ -44,7 +46,7 @@ const Form = () => {
 
                     <a href="#">Recupere a sua senha</a>
 
-                    <ButtonSignUp/>
+                    <ButtonSignUp />
                 </Forms>
 
 
@@ -58,13 +60,16 @@ const Form = () => {
                     />
 
                     <Label htmlFor="password">Senha</Label>
-                    <Input type="text"
+                    <Input
+                        type="password"
                         id='password'
+                        {...register('password', { required: true })}
+                        {...errors.password && <span>Senha incorreta</span>}
                     />
 
                     <p>Seus dados pessoais serão usados para aprimorar sua experiência neste site, para gerenciar o acesso a sua conta e para outros propósitos, como descritos em nossa política de privacidade</p>
 
-                    <ButtonRegister/>
+                    <ButtonRegister />
                 </Forms>
             </Container>
         </Section>
