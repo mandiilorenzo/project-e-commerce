@@ -10,7 +10,6 @@ const Button = style.button`
     background-color: var(--primary-purple-color);
     padding: 16px 32px;
     border-radius: 4px;
-    width: 100%;
     border: none;
     margin-top: 20px;
     color: var(--white-color);
