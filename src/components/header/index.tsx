@@ -23,7 +23,9 @@ const Header = () => {
                     <ButtonHeader />
                 </Link>
 
-                <img src="/icone-carrinho.png" alt="Ícone do carrinho de compras" />
+                <Link to={"/carrinho-de-compras"}>
+                    <img src="/icone-carrinho.png" alt="Ícone do carrinho de compras" />
+                </Link>
             </Div>
         </GlobalHeader>
     )

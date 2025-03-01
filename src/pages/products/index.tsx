@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Produto } from "../../components/product"
 import camisetaRoxa from "../../assets/images/camisetaRoxa.png"
 import camisetaPreta2 from "../../assets/images/camisetaPreta2.png"
 import camisetaPreta from "../../assets/images/camisetaPreta.png"
@@ -11,26 +12,18 @@ const Products = () => {
                 <img src={camisetaRoxa} alt="camiseta dev em dobro roxa com logo pequeno" />
 
                 <InfoProduto>
-                    <h1>Camiseta Dev em Dobro</h1>
-
-                    <Style>
-                        <p><strong>Cor:</strong> Roxo</p>
-                        <p><strong>Tamanho</strong>: M</p>
-                    </Style>
-
-                    <span>R$ 89,00</span>
-
-                    <p><strong>Tecido:</strong> malha (70% algodão + 30% poliéster).</p>
-                    <p>Estampa: marca Dev em Dobro.</p>
-                    <p>modelagem: ampla, cava da manga deslocada.</p>
-                    <p>Decote: gola redonda, forrada.</p>
-                    <p>Acabamentos: gola, punhos e barra duplos.</p>
-                    <p>obs.1: as cores podem sofrer pequenas alterações de percepção em razão das diferentes resoluções de tela em que são visualizadas.</p>
-                    <p>obs.2: os adornos contidos nas fotos não acompanham o produto.</p>
-
-                    <Button>Adicionar ao carrinho</Button>
+                    <Produto nome='Camiseta Dev em Dobro'
+                        estilo='Cor: Roxo
+                        Tamanho: M'
+                        preco='R$ 89,00'
+                        descricao='Tecido: malha (70% algodão + 30% poliéster).
+                        Estampa: marca Dev em Dobro.
+                        modelagem: ampla, cava da manga deslocada.
+                        Decote: gola redonda, forrada.
+                        Acabamentos: gola, punhos e barra duplos.
+                        obs.1: as cores podem sofrer pequenas alterações de percepção em razão das diferentes resoluções de tela em que são visualizadas.
+                        obs.2: os adornos contidos nas fotos não acompanham o produto.' />
                 </InfoProduto>
-
             </SelectedProduct>
 
             <Subtitle>Produtos semelhantes</Subtitle>
@@ -94,16 +87,6 @@ const Subtitle = styled.h2`
     align-self: flex-start;
 `
 
-const Style = styled.div`
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 15px;
-    
-    p {
-    margin: 0;
-    }
-`
-
 const ImagesList = styled.ul`
     display: flex;
     align-items: center;
@@ -115,21 +98,6 @@ const ImagesList = styled.ul`
     padding-left: 32px;
     margin-top: -27px;
     }
-`
-
-const Button = styled.button`
-    background-color: var(--primary-purple-color);
-    padding: 16px 32px;
-    max-width: 243px;
-    border-radius: 4px;
-    border: none;
-    margin-top: 20px;
-    color: var(--white-color);
-    font-size: 16px;
-    font-weight: 500;
-    text-align: center;
-    cursor: pointer;
-    letter-spacing: 1px;
 `
 
 

@@ -2,7 +2,7 @@ import style from "styled-components"
 
 const ButtonCarrinho = () => {
     return (
-        <Button><span>Adicionar ao carrinho</span></Button>
+        <Button>Adicionar ao carrinho</Button>
     )
 }
 
