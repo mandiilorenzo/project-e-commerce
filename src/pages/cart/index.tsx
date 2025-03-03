@@ -11,37 +11,41 @@ const Cart = () => {
     const { register } = useForm<Inputs>()
 
     return (
-        <Section>
+        <Main>
             <h1>Carrinho de compras</h1>
 
             <Container>
 
-                <Table>
-                    <thead>
-                        <tr>
-                            <th>Produto</th>
-                            <th>Descrição</th>
-                            <th>Preço</th>
-                            <th>Quantidade</th>
-                            <th>Total</th>
-                            <th></th>
-                        </tr>
-                    </thead>
+                <Section>
+                    <Table>
+                        <thead>
+                            <tr>
+                                <th>Produto</th>
+                                <th>Descrição</th>
+                                <th>Preço</th>
+                                <th>Quantidade</th>
+                                <th>Total</th>
+                                <th></th>
+                            </tr>
+                        </thead>
 
-                    <tbody>
-                        <tr>
-                            <TdImage><ImageProduct src={camisetaRoxa} alt="camiseta dev em dobro roxa com logo pequeno" /></TdImage>
-                            <TdDescribe>Camiseta Dev em Dobro</TdDescribe>
-                            <td>R$ 89,00</td>
-                            <td>
-                                <input type="number" value="1" min="1" />
-                            </td>
-                            <td><span>R$ 89,00</span></td>
-                            <td><IconeDelet src="icone-deletar.png" alt="ícone de lixeira" /></td>
-                        </tr>
-                    </tbody>
+                        <tbody>
+                            <tr>
+                                <TdImage><ImageProduct src={camisetaRoxa} alt="camiseta dev em dobro roxa com logo pequeno" /></TdImage>
+                                <TdDescribe>Camiseta Dev em Dobro</TdDescribe>
+                                <td>R$ 89,00</td>
+                                <td>
+                                    <input type="number" value="1" min="1" />
+                                </td>
+                                <td><span>R$ 89,00</span></td>
+                                <td><IconeDelet src="icone-deletar.png" alt="ícone de lixeira" /></td>
+                            </tr>
+                        </tbody>
+
+                    </Table>
 
                     <h2>Cupom</h2>
+                    
                     <Cupom>
                         <input
                             type="text"
@@ -50,9 +54,10 @@ const Cart = () => {
                         <ButtonCupom>Aplicar cupom</ButtonCupom>
                     </Cupom>
 
-                </Table>
+                </Section>
 
 
+                <SectionForm>
                 <Form>
                     <h3>Entrega</h3>
 
@@ -72,51 +77,73 @@ const Cart = () => {
                     <ButtonEntrega>Atualizar entrega</ButtonEntrega>
 
                     <p>Subtotal dos pedidos: <span>R$ 89,00</span></p>
-                    <p>Frete e manuseio: <span>R$ 10,00</span></p>
-                    <p><strong>Total:</strong> <span>R$ 109,00</span></p>
+                    <Frete>Frete e manuseio: <span>R$ 10,00</span></Frete>
+                    <Total><strong>Total:</strong> <span>R$ 109,00</span></Total>
 
-                    <ButtonFinish>Finalizar compra</ButtonFinish>
                 </Form>
 
+                <ButtonFinish>Finalizar compra</ButtonFinish>
+
+                </SectionForm>
+                
+
             </Container>
-        </Section>
+        </Main>
     )
 }
 
-const Section = styled.section`
+const Main = styled.section`
     border-top: 1px solid var(--primary-purple-color);
 
     h1 {
     font-size: 24px;
     margin-top: 80px;
     margin-bottom: 32px;
-    padding-left: 96px;
+    padding-left: 116px;
     }
 `
 
 const Container = styled.div`
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
     max-width: 1169px;
     margin: auto;
     margin-bottom: 80px;
     gap: 10px;
 `
 
+const Section = styled.div`
+    margin-left: 32px;
+
+    h2 {
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 32px;}
+`
+
+const SectionForm = styled.div`
+    
+`
+
 const Table = styled.table`
     border-collapse: collapse;
+    width: 100%;
+    overflow: hidden;
 
     th {
     background-color: var(--primary-purple-color);
     color: white;
-    padding: 10px;
+    padding: 18px;
     text-align: center;
+    max-width: 500px;
     }
 
     td {
-    padding: 5px;
+    padding: 18px;
     background-color: var(--second-purple-color);
     text-align: center;
+    max-width: 500px;
 
     input {
     max-width: 45px;
@@ -175,7 +202,7 @@ const Cupom = styled.div`
     border-radius: 4px;
     width: 296px;
     padding: 16px 32px 16px 15px;
-    color: var(--primary-purple-color);
+    color: var(--white-color);
 
     &::placeholder {
     color: var(--primary-purple-color); 
@@ -200,18 +227,35 @@ const Form = styled.form`
     font-weight: 400;
     }
 
+    span {
+    color: var(--primary-green-color);
+    font-size: 16px;
+    font-weight: 700;
+    margin-left: 20px;
+    }
+
     input, select {
     background-color: var(--second-purple-color);
     border: 1px solid var(--primary-purple-color);
     border-radius: 4px;
     width: 346px;
     height: 52px;
+    color: var(--white-color);
+    padding-left: 8px;
+    
+    &::placeholder {
+    color: var(--primary-purple-color);
     }
+`
 
+const Frete = styled.p`
+    margin-left: 32px;
+`
+
+const Total = styled.p`
+    margin-left: 98px;
     span {
-    color: var(--primary-green-color);
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 24px;
     }
 `
 
@@ -223,28 +267,34 @@ const ButtonEntrega = styled.button`
     color: var(--white-color);
     font-size: 16px;
     letter-spacing: 1px; 
+    margin-top: 10px;
+    cursor: pointer;
 `
 
 const ButtonCupom = styled.button`
     background-color: var(--second-purple-color);
     border: 1px solid var(--primary-purple-color);
     border-radius: 4px;
-    
-    &::placeholder {
-    color: var(--white-color); 
+    cursor: pointer;
+    color: var(--white-color);
+    max-width: 200px;
+    height: 52px;
+    padding: 16px 30px;
     font-size: 16px;
-    font-weight: 500;
     letter-spacing: 1px;
-    }
 `
 
 const ButtonFinish = styled.button`
     background-color: var(--primary-purple-color);
     border: none;
+    cursor: pointer;
     color: var(--white-color);
     font-size: 16px;
     letter-spacing: 1px;
     padding: 16px 32px;
+    margin-top: 32px;
+    width: 380px;
+    height: 52px;
 `
 
 export { Cart }

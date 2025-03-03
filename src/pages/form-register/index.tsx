@@ -132,6 +132,7 @@ const Input = styled.input`
     border: 1px solid var(--primary-purple-color);
     border-radius: 4px;
     padding: 16px 13px;
+    color: var(--white-color);
 `
 
 const InputCheckbox = styled.input`

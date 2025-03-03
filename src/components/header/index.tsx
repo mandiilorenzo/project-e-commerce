@@ -6,7 +6,7 @@ import { ButtonHeader } from "../buttons/button-header"
 const Header = () => {
     return (
         <GlobalHeader>
-            <img src="/logo.png" alt="Logo Dev em Dobro" />
+            <Link to={"/"}><img src="/logo.png" alt="Logo Dev em Dobro" /></Link>
 
             <Nav>
                 <ul>
