@@ -15,6 +15,8 @@ const Button = styled.button`
     color: var(--white-color);
     font-size: 16px;
     letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+    border: none;
 `
 
 export { ButtonSignUp}

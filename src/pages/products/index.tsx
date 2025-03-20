@@ -1,38 +1,43 @@
-import styled from "styled-components"
-import { Produto } from "../../components/product"
-import camisetaRoxa from "../../assets/images/camisetaRoxa.png"
-import camisetaPreta2 from "../../assets/images/camisetaPreta2.png"
-import camisetaPreta from "../../assets/images/camisetaPreta.png"
-import camisetaRoxa2 from "../../assets/images/camisetaRoxa2.png"
+import { useParams } from 'react-router-dom'
+import styled from 'styled-components'
+import { ButtonCarrinho } from '../../components/buttons/button-carrinho'
+import { products } from '../../utils/products'
 
 const Products = () => {
+    const { id } = useParams()
+    
+    const filteredProduct = products.filter(product => product.id === Number(id))
     return (
         <Section>
             <SelectedProduct>
-                <img src={camisetaRoxa} alt="camiseta dev em dobro roxa com logo pequeno" />
-
-                <InfoProduto>
-                    <Produto nome='Camiseta Dev em Dobro'
-                        estilo='Cor: Roxo
-                        Tamanho: M'
-                        preco='R$ 89,00'
-                        descricao='Tecido: malha (70% algodão + 30% poliéster).
-                        Estampa: marca Dev em Dobro.
-                        modelagem: ampla, cava da manga deslocada.
-                        Decote: gola redonda, forrada.
-                        Acabamentos: gola, punhos e barra duplos.
-                        obs.1: as cores podem sofrer pequenas alterações de percepção em razão das diferentes resoluções de tela em que são visualizadas.
-                        obs.2: os adornos contidos nas fotos não acompanham o produto.' />
-                </InfoProduto>
+                {
+                    filteredProduct.map(product => (
+                        <>
+                            <img src={product.image} alt={product.name} />
+                            <InfoProduto>
+                                <h1>{product.name}</h1>
+                                <span>R$ {product.price}</span>
+                                <p>Cor: {product.color}</p>
+                                <p>Tamanho: {product.size}</p>
+                                <ButtonCarrinho />
+                            </InfoProduto>
+                        </>
+                    ))
+                }
             </SelectedProduct>
 
             <Subtitle>Produtos semelhantes</Subtitle>
 
             <ImagesList>
-                <img src={camisetaPreta2} alt="camiseta dev em dobro preta com logo maior" />
-                <img src={camisetaPreta} alt="camiseta dev em dobro preta com logo pequeno" />
-                <img src={camisetaRoxa2} alt="camiseta dev em dobro roxa com logo maior" />
-                <img src={camisetaRoxa} alt="camiseta dev em dobro roxa com logo pequeno" />
+                <li>
+                    <img src="/produto-1.png" alt="Produto 1" />
+                </li>
+                <li>
+                    <img src="/produto-2.png" alt="Produto 2" />
+                </li>
+                <li>
+                    <img src="/produto-3.png" alt="Produto 3" />
+                </li>
             </ImagesList>
         </Section>
     )
@@ -93,9 +98,9 @@ const ImagesList = styled.ul`
     margin: 40px 0px;
 
     img {
-    width: 280px;
+    width: 300px;
     height: 280px;
-    padding-left: 32px;
+    padding-left: 30px;
     margin-top: -27px;
     }
 `

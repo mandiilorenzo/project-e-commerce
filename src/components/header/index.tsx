@@ -12,14 +12,14 @@ const Header = () => {
                 <ul>
                     <Link to={"/"}><li><a>Home</a></li></Link>
                     <li><a>Sobre</a></li>
-                    <Link to={"/produtos"}><li><a>Produtos</a></li></Link>
+                    <li><a>Produtos</a></li>
                     <li><a>Perguntas frequentes</a></li>
                     <li><a>Fale conosco</a></li>
                 </ul>
             </Nav>
 
             <Div>
-                <Link to={"/formulario"}>
+                <Link to={"/register"}>
                     <ButtonHeader />
                 </Link>
 

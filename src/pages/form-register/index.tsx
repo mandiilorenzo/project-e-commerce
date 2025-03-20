@@ -93,7 +93,7 @@ const Title = styled.h1`
 const Container = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: auto;
+    margin-top: 50px;
     height: 70vh;
     gap: 90px;
 `

@@ -12,6 +12,8 @@ const Button = styled.button`
     padding: 16px 28px;
     width: 253px;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    border: none;
 `
 
 const Span = styled.span`

@@ -1,11 +1,7 @@
 import styled from "styled-components"
+import { products } from "../../utils/products"
 import { ButtonCarrinho } from "../../components/buttons/button-carrinho"
-import camisetaRoxa from "../../assets/images/camisetaRoxa.png"
-import camisetaPreta from "../../assets/images/camisetaPreta.png"
-import canecaRoxa from "../../assets/images/canecaRoxa.png"
-import camisetaPreta2 from "../../assets/images/camisetaPreta2.png"
-import canecaPreta from "../../assets/images/canecaPreta.png"
-import camisetaRoxa2 from "../../assets/images/camisetaRoxa2.png"
+import { Link } from "react-router-dom"
 
 const Home = () => {
     return (
@@ -14,93 +10,24 @@ const Home = () => {
                 <H1>Produtos</H1>
 
                 <ContainerProdutos>
-                    <Produto>
-                        <ImagemProduto src={camisetaRoxa}
-                            alt="camiseta dev em dobro roxa com logo pequeno" />
-                        <InfoProduto>
-                            <H2>Camiseta Dev em Dobro</H2>
-                            <div>
-                                <Style>Cor: roxa</Style>
-                                <Style>Tamanho: M</Style>
-                            </div>
-                            <Preco>R$ 89,00</Preco>
-                            <ButtonCarrinho/>
-                        </InfoProduto>
-                    </Produto>
-
-
-                    <Produto>
-                        <ImagemProduto src={camisetaPreta}
-                            alt="camiseta dev em dobro preta com logo pequeno" />
-                        <InfoProduto>
-                            <H2>Camiseta Dev em Dobro</H2>
-                            <div>
-                                <Style>Cor: preta</Style>
-                                <Style>Tamanho: M</Style>
-                            </div>
-                            <Preco>R$ 89,00</Preco>
-                            <ButtonCarrinho/>
-                        </InfoProduto>
-                    </Produto>
-
-
-                    <Produto>
-                        <ImagemProduto src={canecaRoxa}
-                            alt="caneca dev em dobro roxa" />
-                        <InfoProduto>
-                            <H2>Caneca Dev em Dobro</H2>
-                            <div>
-                                <Style>Cor: roxa</Style>
-                                <Style>Tamanho: único</Style>
-                            </div>
-                            <Preco>R$ 29,00</Preco>
-                            <ButtonCarrinho/>
-                        </InfoProduto>
-                    </Produto>
-
-
-                    <Produto>
-                        <ImagemProduto src={camisetaPreta2}
-                            alt="camiseta dev em dobro preta com logo maior" />
-                        <InfoProduto>
-                            <H2>Camiseta Dev em Dobro</H2>
-                            <div>
-                                <Style>Cor: preta</Style>
-                                <Style>Tamanho: M</Style>
-                            </div>
-                            <Preco>R$ 89,00</Preco>
-                            <ButtonCarrinho/>
-                        </InfoProduto>
-                    </Produto>
-
-
-                    <Produto>
-                        <ImagemProduto src={canecaPreta}
-                            alt="caneca preta dev em dobro" />
-                        <InfoProduto>
-                            <H2>Caneca Dev em Dobro</H2>
-                            <div>
-                                <Style>Cor: preta</Style>
-                                <Style>Tamanho: único</Style>
-                            </div>
-                            <Preco>R$ 29,00</Preco>
-                            <ButtonCarrinho/>
-                        </InfoProduto>
-                    </Produto>
-
-                    <Produto>
-                        <ImagemProduto src={camisetaRoxa2}
-                            alt="camiseta dev em dobro roxa com logo maior" />
-                        <InfoProduto>
-                            <H2>Camiseta Dev em Dobro</H2>
-                            <div>
-                                <Style>Cor: roxa</Style>
-                                <Style>Tamanho: M</Style>
-                            </div>
-                            <Preco>R$ 89,00</Preco>
-                            <ButtonCarrinho/>
-                        </InfoProduto>
-                    </Produto>
+                    {
+                        products.map((product) => (
+                            <Produto key={product.id}>
+                                <ImagemProduto src={product.image} alt={product.name} />
+                                <InfoProduto>
+                                    <H2>{product.name}</H2>
+                                    <div>
+                                    <Style>Cor: {product.color}</Style>
+                                    <Style>Tamanho: {product.size}</Style>
+                                    </div>
+                                    <Preco>R$ {product.price}</Preco>
+                                    <Link to={`/produto/${product.id}`}>
+                                    <ButtonCarrinho />
+                                    </Link>
+                                </InfoProduto>
+                            </Produto>
+                        ))
+                    }
 
                 </ContainerProdutos>
             </Section>

@@ -99,7 +99,7 @@ const Main = styled.section`
     font-size: 24px;
     margin-top: 80px;
     margin-bottom: 32px;
-    padding-left: 116px;
+    padding-left: 118px;
     }
 `
 
@@ -195,12 +195,13 @@ const IconeDelet = styled.img`
 const Cupom = styled.div`
     display: flex;
     gap: 32px;
+    margin-top: 5px;
 
     input {
     background-color: var(--second-purple-color);
     border: 1px solid var(--primary-purple-color);
     border-radius: 4px;
-    width: 296px;
+    width: 344px;
     padding: 16px 32px 16px 15px;
     color: var(--white-color);
 
@@ -220,7 +221,7 @@ const Form = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 2px 15px;
+    padding: 16px 15px;
 
     h3, label, p {
     font-size: 16px;
@@ -242,6 +243,7 @@ const Form = styled.form`
     height: 52px;
     color: var(--white-color);
     padding-left: 8px;
+    margin-top: -25px;
     
     &::placeholder {
     color: var(--primary-purple-color);
@@ -250,10 +252,13 @@ const Form = styled.form`
 
 const Frete = styled.p`
     margin-left: 32px;
+    margin-top: 12px;
 `
 
 const Total = styled.p`
     margin-left: 98px;
+    margin-top: 12px;
+    
     span {
     font-size: 24px;
     }
@@ -263,17 +268,19 @@ const ButtonEntrega = styled.button`
     padding: 16px;
     max-width: 200px;
     background-color: var(--second-purple-color);
-    border: 1px solid var(--primary-purple-color);
+    border: 2px solid var(--primary-purple-color);
+    border-radius: 4px;
     color: var(--white-color);
     font-size: 16px;
     letter-spacing: 1px; 
-    margin-top: 10px;
+    margin-top: -24px;
     cursor: pointer;
+    font-family: 'Roboto', sans-serif;
 `
 
 const ButtonCupom = styled.button`
     background-color: var(--second-purple-color);
-    border: 1px solid var(--primary-purple-color);
+    border: 2px solid var(--primary-purple-color);
     border-radius: 4px;
     cursor: pointer;
     color: var(--white-color);
@@ -282,6 +289,7 @@ const ButtonCupom = styled.button`
     padding: 16px 30px;
     font-size: 16px;
     letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
 `
 
 const ButtonFinish = styled.button`
@@ -295,6 +303,7 @@ const ButtonFinish = styled.button`
     margin-top: 32px;
     width: 380px;
     height: 52px;
+    font-family: 'Roboto', sans-serif;
 `
 
 export { Cart }

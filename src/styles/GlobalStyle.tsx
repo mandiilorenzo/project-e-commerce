@@ -2,17 +2,17 @@ import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
   * {
-    margin: 0
-    padding: 0
-    box-sizing: border-box
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     }
 
     a {
-        text-decoration: none
+        text-decoration: none;
     }
 
     ul {
-        list-style: none   
+        list-style: none;  
     }
     
     :root {

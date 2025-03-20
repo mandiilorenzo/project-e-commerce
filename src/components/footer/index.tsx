@@ -66,6 +66,8 @@ const Infos = styled.div`
     font-size: 16px;
     color: var(--primary-purple-color);
     font-weight: 500;
+    padding: 10px 0;
+    
     }
 
     a {
@@ -85,7 +87,7 @@ const List = styled.ul`
     padding: 2px 0;
 
     li {
-    padding: 8px 0;
+    padding: 10px 0;
     }
 `
 

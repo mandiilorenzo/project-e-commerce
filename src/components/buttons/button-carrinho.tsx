@@ -18,6 +18,8 @@ const Button = style.button`
     text-align: center;
     cursor: pointer;
     letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+    border: none;
 `
 
 export { ButtonCarrinho }
