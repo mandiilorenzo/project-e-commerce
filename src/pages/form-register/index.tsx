@@ -10,7 +10,7 @@ type Inputs = {
 }
 
 const Form = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm<Inputs>()
+    const { register, formState: { errors } } = useForm<Inputs>()
 
     return (
         <S.Section>

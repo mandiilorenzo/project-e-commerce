@@ -1,8 +1,12 @@
 import style from "styled-components"
+import { products } from "../../utils/products"
+import { useCart } from "../../context/CartContext"
 
 const ButtonCarrinho = () => {
+    const { addToCart } = useCart()
+    
     return (
-        <Button>Adicionar ao carrinho</Button>
+        <Button onClick={() => products.forEach(product => addToCart(product))}>Adicionar ao carrinho</Button>
     )
 }
 

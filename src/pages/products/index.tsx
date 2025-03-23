@@ -24,7 +24,7 @@ const Products = () => {
 
                                 <span>R$ {product.price}</span>
                                 
-                                <ButtonCarrinho />
+                                <ButtonCarrinho/>
 
                                 <p>
                                     {product.description}

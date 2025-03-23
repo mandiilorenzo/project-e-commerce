@@ -5,7 +5,17 @@ import camisetaPreta2 from '../assets/images/camisetaPreta2.png';
 import canecaPreta from '../assets/images/canecaPreta.png';
 import camisetaRoxa2 from '../assets/images/camisetaRoxa2.png';
 
-export const products = [
+export interface Product {
+    id: number,
+    name: string,
+    price: number,
+    image: string,
+    color: string,
+    size: string,
+    description?: string
+}
+
+export const products: Product[] = [
     {
         id: 1,
         name: "Camiseta Dev em Dobro",
@@ -22,7 +32,7 @@ export const products = [
         image: camisetaPreta,
         color: "Preta",
         size: "M",
-        describe: "Tecido: malha (70% algodão + 30% poliéster) Estampa: marca Dev em Dobro. modelagem: ampla, cava da manga deslocada. Decote: gola redonda, forrada. Acabamentos: gola, punhos e barra duplos."
+        description: "Tecido: malha (70% algodão + 30% poliéster) Estampa: marca Dev em Dobro. modelagem: ampla, cava da manga deslocada. Decote: gola redonda, forrada. Acabamentos: gola, punhos e barra duplos."
     },
     {
         id: 3,
@@ -39,7 +49,7 @@ export const products = [
         image: camisetaPreta2,
         color: "Preta",
         size: "M",
-        describe: "Tecido: malha (70% algodão + 30% poliéster) Estampa: marca Dev em Dobro. modelagem: ampla, cava da manga deslocada. Decote: gola redonda, forrada. Acabamentos: gola, punhos e barra duplos."
+        description: "Tecido: malha (70% algodão + 30% poliéster) Estampa: marca Dev em Dobro. modelagem: ampla, cava da manga deslocada. Decote: gola redonda, forrada. Acabamentos: gola, punhos e barra duplos."
     },
     {
         id: 5,
@@ -56,6 +66,6 @@ export const products = [
         image: camisetaRoxa2,
         color: "Roxa",
         size: "M",
-        describe: "Tecido: malha (70% algodão + 30% poliéster) Estampa: marca Dev em Dobro. modelagem: ampla, cava da manga deslocada. Decote: gola redonda, forrada. Acabamentos: gola, punhos e barra duplos."
+        description: "Tecido: malha (70% algodão + 30% poliéster) Estampa: marca Dev em Dobro. modelagem: ampla, cava da manga deslocada. Decote: gola redonda, forrada. Acabamentos: gola, punhos e barra duplos."
     }
 ]

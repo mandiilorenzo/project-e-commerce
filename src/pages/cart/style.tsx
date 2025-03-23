@@ -98,6 +98,7 @@ export const ImageProduct = styled.img`
 export const IconeDelet = styled.img`
     max-width: 24px;
     height: 24px;
+    cursor: pointer;
 `
 
 export const Cupom = styled.div`
