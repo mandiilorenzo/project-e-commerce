@@ -20,6 +20,8 @@ const Button = style.button`
     letter-spacing: 1px;
     font-family: 'Roboto', sans-serif;
     border: none;
+    width: 329px;
+    height: 52px;
 `
 
 export { ButtonCarrinho }

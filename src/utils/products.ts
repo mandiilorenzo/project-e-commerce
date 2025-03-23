@@ -12,7 +12,8 @@ export const products = [
         price: 89.00,
         image: camisetaRoxa,
         color: "Roxa",
-        size: "M"
+        size: "M",
+        description: "Tecido: malha (70% algodão + 30% poliéster) Estampa: marca Dev em Dobro. modelagem: ampla, cava da manga deslocada. Decote: gola redonda, forrada. Acabamentos: gola, punhos e barra duplos."
     },
     {
         id: 2,
@@ -20,7 +21,8 @@ export const products = [
         price: 89.00,
         image: camisetaPreta,
         color: "Preta",
-        size: "M"
+        size: "M",
+        describe: "Tecido: malha (70% algodão + 30% poliéster) Estampa: marca Dev em Dobro. modelagem: ampla, cava da manga deslocada. Decote: gola redonda, forrada. Acabamentos: gola, punhos e barra duplos."
     },
     {
         id: 3,
@@ -36,7 +38,8 @@ export const products = [
         price: 89.00,
         image: camisetaPreta2,
         color: "Preta",
-        size: "M"
+        size: "M",
+        describe: "Tecido: malha (70% algodão + 30% poliéster) Estampa: marca Dev em Dobro. modelagem: ampla, cava da manga deslocada. Decote: gola redonda, forrada. Acabamentos: gola, punhos e barra duplos."
     },
     {
         id: 5,
@@ -52,6 +55,7 @@ export const products = [
         price: 89.00,
         image: camisetaRoxa2,
         color: "Roxa",
-        size: "M"
+        size: "M",
+        describe: "Tecido: malha (70% algodão + 30% poliéster) Estampa: marca Dev em Dobro. modelagem: ampla, cava da manga deslocada. Decote: gola redonda, forrada. Acabamentos: gola, punhos e barra duplos."
     }
 ]
